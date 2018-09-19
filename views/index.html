@@ -8,14 +8,18 @@
   <div class="row">
     <div class="col-md-3">
       <img src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg"><br>
-      <b>Your Name</b><br>
-      100 followers
+      <b>Gon</b><br>
+      2 followers
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9" style="color: rgb(92, 153, 202)">
     
       <!-- display tweets here -->
       {% for tweet in tweets %}
-        <li>{{tweet.content}}</li>
+      <div>
+          <img class="icon" src="https://i.stack.imgur.com/WprXH.jpg?s=328&g=1" width="32" height="32" style="float: left"> 
+          <li style="list-style-type: none"><a href="/users/{{tweet.name}}">{{tweet.name}} </a></li>
+          <li style="list-style-type: none">{{tweet.content}}</li>
+      </div>
       {% endfor %}
       
     </div>
