@@ -1,6 +1,9 @@
 const _ = require('lodash');
 
-var data = []
+var data = [{ name: 'Toni Lidueña',
+content: 'Plataforma 5 es emocionante! Los profesores simplemente son emocionante. #P5Love #codedreams' },
+{ name: 'Tincho Tralice',
+content: 'Plataforma 5 es gracioso! Los profesores simplemente son cool. #P5Love #codedreams' }]
 
 function add (name, content) {
     data.push({ name: name, content: content });
@@ -40,3 +43,7 @@ const getFakeTweet = function() {
 for (let i = 0; i < 10; i++) {
     module.exports.add( getFakeName(), getFakeTweet() );
 }
+
+
+
+console.log()

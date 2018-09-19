@@ -1,21 +1,18 @@
-const express = require( 'express' );
 const app = express(); 
 const nunjucks = require('nunjucks');
+const routes = require('./routes');
 
-app.use(function(req,res,next){
-    console.log('hola')   
-    next();
-})
+app.use('/', routes);
 
-app.use('/special*', function(req,res,next){
-    res.send('<h1> Lugar especial </h1>') 
-    next();
-})
+// app.use(function(req,res,next){
+//     console.log('hola')   
+//     next();
+// })
 
-app.use('/fama', function(req,res,next){
-    res.render( 'index', {title: 'Hall of Fame', people: people} ); // f(x) que pasa index.html a Nunjucks
-    next();
-})
+// app.use('/fama', function(req,res,next){
+//     res.render( 'index', {title: 'Hall of Fame', people: people} ); // f(x) que pasa index.html a Nunjucks
+//     next();
+// })
 
 
 app.set('view engine', 'html'); // hace que res.render funcione con archivos html
