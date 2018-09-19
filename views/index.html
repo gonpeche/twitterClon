@@ -12,13 +12,22 @@
       2 followers
     </div>
     <div class="col-md-9" style="color: rgb(92, 153, 202)">
-    
+        {% if showForm %}
+        <form action="/tweets" method="POST">
+          <label for="name_field">Name:</label>
+          <input name="name" type="text" id="name_field" />
+          <label for="text_field">Text:</label>
+          <input name="text" type="text" id="text_field" style="width: 350px;" />
+          <input type="submit" value="Submit" />
+        </form>
+      {% endif %}
       <!-- display tweets here -->
       {% for tweet in tweets %}
       <div>
           <img class="icon" src="https://i.stack.imgur.com/WprXH.jpg?s=328&g=1" width="32" height="32" style="float: left"> 
           <li style="list-style-type: none"><a href="/users/{{tweet.name}}">{{tweet.name}} </a></li>
-          <li style="list-style-type: none">{{tweet.content}}</li>
+          <li style="list-style-type: none"><a href="/tweets/{{tweet.id}}">{{tweet.content}}</a></li>
+          <!-- <li style="list-style-type: none"><a href="/tweets/{{tweet.id}}">{{tweet.content}} </a></li> -->
       </div>
       {% endfor %}
       
