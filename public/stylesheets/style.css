@@ -57,3 +57,10 @@
  .content .by {
    font-weight: bold;
  }
+
+.twit > img {
+  float: left;
+}
+.twit > li {
+  float: right;
+}
