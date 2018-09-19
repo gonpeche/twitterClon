@@ -14,11 +14,17 @@ function find (properties) {
     return _.cloneDeep(_.filter(data, properties));
 };
 
-const randArrayEl = function(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
+module.exports = { 
+    add: add, 
+    list: list, 
+    find: find 
 };
 
 // TWEETS FALSOS //
+
+const randArrayEl = function(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+};
 
 const getFakeName = function() {
     const fakeFirsts = ['Toni', 'Guille', 'Santi', 'Facu', 'Alan', 'Pinki', 'Tincho', 'Solano', 'R2D2'];
@@ -34,10 +40,3 @@ const getFakeTweet = function() {
 for (let i = 0; i < 10; i++) {
     module.exports.add( getFakeName(), getFakeTweet() );
 }
-
-
-module.exports = { 
-    add: dd, 
-    list: list, 
-    find: find 
-};

@@ -1,7 +1,6 @@
 const express = require( 'express' );
 const app = express(); 
 const nunjucks = require('nunjucks');
-const _ = require('lodash');
 
 app.use(function(req,res,next){
     console.log('hola')   
