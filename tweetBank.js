@@ -1,11 +1,11 @@
 // const _ = require('lodash');
-// var aux = 0;
 // var data = [
 //     { name: 'Toni Lidueña',
 // content: 'Plataforma 5 es emocionante! Los profesores simplemente son emocionante. #P5Love #codedreams' },
 // { name: 'Tincho Tralice',
 // content: 'Plataforma 5 es gracioso! Los profesores simplemente son cool. #P5Love #codedreams' }
 // ];
+// var aux = 0;
 
 // function add (name, content) {
 //     aux++;
