@@ -1,6 +1,7 @@
 const express = require( 'express' );
 const app = express(); 
 const nunjucks = require('nunjucks');
+const _ = require('lodash');
 
 app.use(function(req,res,next){
     console.log('hola')   
@@ -16,16 +17,6 @@ app.use('/fama', function(req,res,next){
     res.render( 'index', {title: 'Hall of Fame', people: people} ); // f(x) que pasa index.html a Nunjucks
     next();
 })
-
-var locals = {
-    title: 'An Example',
-    people: [
-        { name: 'Gandalf'},
-        { name: 'Frodo' },
-        { name: 'Hermione'}
-    ]
-};
-
 
 
 app.set('view engine', 'html'); // hace que res.render funcione con archivos html
